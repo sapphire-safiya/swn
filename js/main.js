@@ -2969,6 +2969,9 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
     });
 var scenes = [];
 $j(document).ready(function() {
+
+    $j(this).scrollTop(0);
+    $j(window).scrollTop(0);
         function e() {
             var a = window,
                 b = "inner";
@@ -3385,3 +3388,5 @@ $j(document).ready(function() {
     }, Array.max = function(a) {
         return Math.max.apply(Math, a)
     };
+
+    

@@ -116,7 +116,7 @@ body {
 	font-family: 'Aref Ruqaa', serif;
 	font-size: 150%;
 	line-height: 1.8em;
-	background: url(../img/background2.png) center fixed;
+	background:#fafafa url('../img/background2.jpg') repeat;
 	color: #BE944A
 }
 
@@ -192,7 +192,7 @@ section:after {
 
 .bottomRightWrap,
 .topLeftWrap {
-	width: 50%;
+	width: 40%;
 	position: absolute
 }
 
@@ -328,8 +328,10 @@ span.scroll {
 }
 
 .clouds,
-.section {
-	position: relative
+.chrome .section {
+	position: relative !important;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
 }
 
 .mac .scrollmagic-pin-spacer,
@@ -346,7 +348,8 @@ span.scroll {
 	width: 100%;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box
+	box-sizing: border-box;
+	background: rgba(255,255,255,0.8);
 }
 .section.padding{
     padding: 0 200px;
@@ -553,7 +556,8 @@ span.scroll {
 }
 
 #wishes .padChild {
-	background: url(../img/best-wishes.png) center no-repeat
+	background: url(../img/best-wishes.png) center no-repeat;
+	background-size: contain;
 }
 
 .padChild>.fadeIn {
@@ -586,9 +590,6 @@ span.scroll {
 	.flip-container {
 		width: 80%
 	}
-	.us {
-		margin-left: -100px
-	}
 }
 
 @media all and (max-width:767px) {
@@ -598,7 +599,6 @@ span.scroll {
 	}
 	.bottomRightWrap,
 	.topLeftWrap {
-		width: 60%;
 		max-width: 450px
 	}
 	.bottomBorder,
@@ -610,9 +610,6 @@ span.scroll {
 	.sofia {
 		font-size: 1.5em;
 		line-height: 1.5em
-	}
-	#wishes .padChild {
-		background-size: cover
 	}
 	#venue {
 		background-size: contain
@@ -660,9 +657,10 @@ span.scroll {
 		max-width: 100%;
 		float: none
 	}
-	.bckPic>img {
-		height: 40vh;
-		float: left
+	.us {
+		height: 50vh;
+		background-size: 48%;
+		background-position: left bottom;
 	}
 	.fr>img {
 		float: right
@@ -680,10 +678,15 @@ span.scroll {
 		background: rgba(255, 255, 255, .8)
 	}
     .col4,
-    .col2
+    .col2,
 	.col6 {
 		width: 100%;
 		clear: both
+	}
+	.groomParents .text, .brideParents .text{
+		text-align: left;
+		vertical-align: top;
+		padding: 50px;
 	}
 	.text {
 		padding: 15px 20px
