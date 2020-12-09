@@ -3232,6 +3232,11 @@ $j(document).ready(function() {
                 opacity: 0,
                 left: "-100%"
             }
+        })).add(TweenMax.from($j("#venue .i"), 1, {
+            css: {
+                opacity: 0,
+                left: "-100%"
+            }
         }));
         scenes[4] = new ScrollMagic.Scene({
             triggerElement: "#venue",
